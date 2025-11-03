@@ -63,13 +63,13 @@ def home():
     return jsonify({
         "message": "مرحبًا بك في API حل المعادلات التربيعية",
         "endpoints": {
-            "solve_quadratic": "/api/solve",
+            "solve_quadratic": "/solve",
             "method": "POST",
             "parameters": {"a": "number", "b": "number", "c": "number"}
         }
     })
 
-@app.route('/api/solve', methods=['POST'])
+@app.route('/solve', methods=['POST'])
 def api_solve():
     try:
         data = request.get_json()
